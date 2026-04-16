@@ -1,0 +1,77 @@
+:root {
+  /* Primary */
+  --color-primary: rgb(207 189 254);
+  --color-on-primary: rgb(54 39 93);
+  --color-primary-container: rgb(77 61 117);
+  --color-on-primary-container: rgb(233 221 255);
+  --color-surface-tint: rgb(207 189 254);
+  --color-inverse-primary: rgb(101 85 143);
+
+  /* Secondary */
+  --color-secondary: rgb(203 194 219);
+  --color-on-secondary: rgb(51 45 65);
+  --color-secondary-container: rgb(74 68 88);
+  --color-on-secondary-container: rgb(232 222 248);
+
+  /* Tertiary */
+  --color-tertiary: rgb(239 184 200);
+  --color-on-tertiary: rgb(74 37 50);
+  --color-tertiary-container: rgb(99 59 72);
+  --color-on-tertiary-container: rgb(255 217 227);
+
+  /* Error */
+  --color-error: rgb(255 180 171);
+  --color-on-error: rgb(105 0 5);
+  --color-error-container: rgb(147 0 10);
+  --color-on-error-container: rgb(255 218 214);
+
+  /* Background & surface */
+  --color-background: rgb(20 18 24);
+  --color-on-background: rgb(230 224 233);
+  --color-surface: rgb(20 18 24);
+  --color-on-surface: rgb(230 224 233);
+  --color-surface-variant: rgb(73 69 78);
+  --color-on-surface-variant: rgb(202 196 207);
+
+  --color-surface-dim: rgb(20 18 24);
+  --color-surface-bright: rgb(59 56 62);
+  --color-inverse-surface: rgb(230 224 233);
+  --color-inverse-on-surface: rgb(50 47 53);
+
+  /* Surface containers (elevación) */
+  --color-surface-container-lowest: rgb(15 13 19);
+  --color-surface-container-low: rgb(29 27 32);
+  --color-surface-container: rgb(33 31 36);
+  --color-surface-container-high: rgb(43 41 47);
+  --color-surface-container-highest: rgb(54 52 58);
+
+  /* Outline & utility */
+  --color-outline: rgb(148 143 153);
+  --color-outline-variant: rgb(73 69 78);
+  --color-shadow: rgb(0 0 0);
+  --color-scrim: rgb(0 0 0);
+
+  /* Airing (verde) */
+  --color-airing: rgb(125 219 144);
+  --color-on-airing: rgb(0 57 20);
+  --color-airing-container: rgb(0 83 34);
+  --color-on-airing-container: rgb(152 246 168);
+
+  /* Finished (azul) */
+  --color-finished: rgb(162 202 255);
+  --color-on-finished: rgb(0 49 95);
+  --color-finished-container: rgb(0 71 138);
+  --color-on-finished-container: rgb(212 227 255);
+
+  /* Not yet aired (ámbar) */
+  --color-not-yet-aired: rgb(255 184 108);
+  --color-on-not-yet-aired: rgb(71 42 0);
+  --color-not-yet-aired-container: rgb(101 62 0);
+  --color-on-not-yet-aired-container: rgb(255 221 185);
+
+  /* Cancelled (rosa desaturado, distinto de error) */
+  --color-cancelled: rgb(212 174 177);
+  --color-on-cancelled: rgb(60 42 44);
+  --color-cancelled-container: rgb(90 63 66);
+  --color-on-cancelled-container: rgb(255 219 221);
+}

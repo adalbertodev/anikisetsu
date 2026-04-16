@@ -1,0 +1,79 @@
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body-medium);
+  line-height: var(--line-height-body-medium);
+  font-weight: var(--font-weight-body-medium);
+  letter-spacing: var(--letter-spacing-body-medium);
+}
+
+:lang(ja) {
+  font-family: var(--font-family-jp);
+}
+
+h1 {
+  font-size: var(--font-size-headline-large);
+  line-height: var(--line-height-headline-large);
+  font-weight: var(--font-weight-headline-large);
+  letter-spacing: var(--letter-spacing-headline-large);
+}
+
+h2 {
+  font-size: var(--font-size-headline-medium);
+  line-height: var(--line-height-headline-medium);
+  font-weight: var(--font-weight-headline-medium);
+  letter-spacing: var(--letter-spacing-headline-medium);
+}
+
+h3 {
+  font-size: var(--font-size-headline-small);
+  line-height: var(--line-height-headline-small);
+  font-weight: var(--font-weight-headline-small);
+  letter-spacing: var(--letter-spacing-headline-small);
+}
+
+h4 {
+  font-size: var(--font-size-title-large);
+  line-height: var(--line-height-title-large);
+  font-weight: var(--font-weight-title-large);
+  letter-spacing: var(--letter-spacing-title-large);
+}
+
+h5 {
+  font-size: var(--font-size-title-medium);
+  line-height: var(--line-height-title-medium);
+  font-weight: var(--font-weight-title-medium);
+  letter-spacing: var(--letter-spacing-title-medium);
+}
+
+h6 {
+  font-size: var(--font-size-title-small);
+  line-height: var(--line-height-title-small);
+  font-weight: var(--font-weight-title-small);
+  letter-spacing: var(--letter-spacing-title-small);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: text-decoration-color var(--duration-short) var(--easing-standard);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-title-medium);
+}
+
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}

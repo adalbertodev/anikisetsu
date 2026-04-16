@@ -1,0 +1,102 @@
+:root {
+  /* ----- Font families ----- */
+  --font-family-sans: "Outfit", system-ui, sans-serif;
+  --font-family-jp: "Noto Sans JP", system-ui, sans-serif;
+
+  /* ----- Display ----- */
+  --font-size-display-large: 3.5625rem; /* 57px */
+  --line-height-display-large: 4rem; /* 64px */
+  --font-weight-display-large: 700;
+  --letter-spacing-display-large: -0.015625rem;
+
+  --font-size-display-medium: 2.8125rem; /* 45px */
+  --line-height-display-medium: 3.25rem; /* 52px */
+  --font-weight-display-medium: 700;
+  --letter-spacing-display-medium: 0;
+
+  --font-size-display-small: 2.25rem; /* 36px */
+  --line-height-display-small: 2.75rem; /* 44px */
+  --font-weight-display-small: 600;
+  --letter-spacing-display-small: 0;
+
+  /* ----- Headline ----- */
+  --font-size-headline-large: 2rem; /* 32px */
+  --line-height-headline-large: 2.5rem; /* 40px */
+  --font-weight-headline-large: 600;
+  --letter-spacing-headline-large: 0;
+
+  --font-size-headline-medium: 1.75rem; /* 28px */
+  --line-height-headline-medium: 2.25rem; /* 36px */
+  --font-weight-headline-medium: 600;
+  --letter-spacing-headline-medium: 0;
+
+  --font-size-headline-small: 1.5rem; /* 24px */
+  --line-height-headline-small: 2rem; /* 32px */
+  --font-weight-headline-small: 600;
+  --letter-spacing-headline-small: 0;
+
+  /* ----- Title ----- */
+  --font-size-title-large: 1.375rem; /* 22px */
+  --line-height-title-large: 1.75rem; /* 28px */
+  --font-weight-title-large: 500;
+  --letter-spacing-title-large: 0;
+
+  --font-size-title-medium: 1rem; /* 16px */
+  --line-height-title-medium: 1.5rem; /* 24px */
+  --font-weight-title-medium: 600;
+  --letter-spacing-title-medium: 0.00938rem;
+
+  --font-size-title-small: 0.875rem; /* 14px */
+  --line-height-title-small: 1.25rem; /* 20px */
+  --font-weight-title-small: 600;
+  --letter-spacing-title-small: 0.00625rem;
+
+  /* ----- Body ----- */
+  --font-size-body-large: 1rem; /* 16px */
+  --line-height-body-large: 1.5rem; /* 24px */
+  --font-weight-body-large: 400;
+  --letter-spacing-body-large: 0.03125rem;
+
+  --font-size-body-medium: 0.875rem; /* 14px */
+  --line-height-body-medium: 1.25rem; /* 20px */
+  --font-weight-body-medium: 400;
+  --letter-spacing-body-medium: 0.01563rem;
+
+  --font-size-body-small: 0.75rem; /* 12px */
+  --line-height-body-small: 1rem; /* 16px */
+  --font-weight-body-small: 400;
+  --letter-spacing-body-small: 0.025rem;
+
+  /* ----- Label ----- */
+  --font-size-label-large: 0.875rem; /* 14px */
+  --line-height-label-large: 1.25rem; /* 20px */
+  --font-weight-label-large: 500;
+  --letter-spacing-label-large: 0.00625rem;
+
+  --font-size-label-medium: 0.75rem; /* 12px */
+  --line-height-label-medium: 1rem; /* 16px */
+  --font-weight-label-medium: 600;
+  --letter-spacing-label-medium: 0.03125rem;
+
+  --font-size-label-small: 0.6875rem; /* 11px */
+  --line-height-label-small: 1rem; /* 16px */
+  --font-weight-label-small: 600;
+  --letter-spacing-label-small: 0.03125rem;
+
+  /* ----- Japanese (Noto Sans JP) ----- */
+  --font-size-title-jp-large: 1.375rem; /* 22px */
+  --line-height-title-jp-large: 2rem; /* 32px */
+  --font-weight-title-jp-large: 500;
+
+  --font-size-title-jp-medium: 1rem; /* 16px */
+  --line-height-title-jp-medium: 1.75rem; /* 28px */
+  --font-weight-title-jp-medium: 500;
+
+  --font-size-title-jp-small: 0.875rem; /* 14px */
+  --line-height-title-jp-small: 1.5rem; /* 24px */
+  --font-weight-title-jp-small: 500;
+
+  --font-size-body-jp-medium: 0.875rem; /* 14px */
+  --line-height-body-jp-medium: 1.5rem; /* 24px */
+  --font-weight-body-jp-medium: 400;
+}

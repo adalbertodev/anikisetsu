@@ -1,0 +1,15 @@
+:root {
+  /* ----- Durations ----- */
+  --duration-short: 150ms; /* hover, focus, press */
+  --duration-medium: 300ms; /* expansión de componentes, transiciones de estado */
+  --duration-long: 500ms; /* entrada/salida de páginas, modales */
+
+  /* ----- Easings -----
+   * standard              → transiciones entre estados del mismo elemento (color, opacidad).
+   * emphasized            → transiciones con cambio de tamaño o posición significativo.
+   * emphasized-decelerate → entrada de elementos (modal apareciendo, card cargando).
+   */
+  --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
