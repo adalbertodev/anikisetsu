@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 
 docs/
-.claude/
+.vscode/
+src/data/**/*.json
