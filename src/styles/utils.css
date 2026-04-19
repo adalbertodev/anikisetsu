@@ -1,0 +1,71 @@
+/* oculto visual y semánticamente (equivale a unmount). */
+.is-hidden {
+  display: none !important;
+}
+
+/* oculto visualmente, expuesto a tecnologías asistidas */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.icon--filled {
+  font-variation-settings: "FILL" 1;
+}
+
+/* STATE LAYER */
+.state-layer {
+  position: relative;
+  overflow: hidden;
+}
+
+.state-layer:focus-visible,
+.state-layer--has-child:has(:focus-visible),
+*:focus-visible > .state-layer--has-parent {
+  outline: 2px solid var(--color-focus-ring, var(--color-primary));
+  outline-offset: 2px;
+}
+
+.state-layer--absolute {
+  position: absolute;
+}
+
+.state-layer::before {
+  background-color: var(--color-on-surface);
+  content: "";
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity var(--duration-short) var(--easing-standard);
+}
+
+.state-layer--secondary::before,
+.state-layer--has-child:has(.state-layer--secondary)::before {
+  background-color: var(--color-on-secondary-container);
+}
+
+.state-layer:hover::before,
+.state-layer--has-child:has(:hover)::before,
+*:hover > .state-layer--has-parent::before {
+  opacity: 0.08;
+}
+
+.state-layer:focus-visible::before,
+.state-layer--has-child:has(:focus-visible)::before,
+*:focus-visible > .state-layer--has-parent::before {
+  opacity: 0.1;
+}
+
+.state-layer:active::before,
+.state-layer--has-child:has(:active)::before,
+*:active > .state-layer--has-parent::before {
+  opacity: 0.12;
+}

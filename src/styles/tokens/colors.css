@@ -7,6 +7,8 @@
   --color-surface-tint: rgb(207 189 254);
   --color-inverse-primary: rgb(101 85 143);
 
+  --color-primary-alpha-20: rgba(207 189 254 / 0.2);
+
   /* Secondary */
   --color-secondary: rgb(203 194 219);
   --color-on-secondary: rgb(51 45 65);
@@ -50,6 +52,8 @@
   --color-outline-variant: rgb(73 69 78);
   --color-shadow: rgb(0 0 0);
   --color-scrim: rgb(0 0 0);
+
+  --color-scrim-alpha-40: rgba(0 0 0 / 0.4);
 
   /* Airing (verde) */
   --color-airing: rgb(125 219 144);

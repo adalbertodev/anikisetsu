@@ -80,7 +80,7 @@ a {
 }
 
 /* Respect users who prefer reduced motion. */
-@media (prefers-reduced-motion: reduce) {
+/*@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -90,3 +90,4 @@ a {
     scroll-behavior: auto !important;
   }
 }
+*/

@@ -7,9 +7,16 @@ body {
   color: var(--color-on-background);
   font-family: var(--font-family-sans);
   font-size: var(--font-size-body-medium);
-  line-height: var(--line-height-body-medium);
   font-weight: var(--font-weight-body-medium);
   letter-spacing: var(--letter-spacing-body-medium);
+  line-height: var(--line-height-body-medium);
+  padding-bottom: var(--bottom-nav-height);
+}
+
+@media (min-width: 600px) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 :lang(ja) {
@@ -62,10 +69,7 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   transition: text-decoration-color var(--duration-short) var(--easing-standard);
-}
-
-a:hover {
-  text-decoration: underline;
+  width: fit-content;
 }
 
 strong,
