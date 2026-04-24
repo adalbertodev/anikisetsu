@@ -96,6 +96,10 @@
   --line-height-title-jp-small: 1.5rem; /* 24px */
   --font-weight-title-jp-small: 500;
 
+  --font-size-title-jp-smaller: 0.75rem; /* 12px */
+  --line-height-title-jp-smaller: 1.25rem; /* 20px */
+  --font-weight-title-jp-smaller: 500;
+
   --font-size-body-jp-medium: 0.875rem; /* 14px */
   --line-height-body-jp-medium: 1.5rem; /* 24px */
   --font-weight-body-jp-medium: 400;

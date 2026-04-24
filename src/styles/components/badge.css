@@ -1,0 +1,62 @@
+.badge {
+  align-items: center;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-outline);
+  display: flex;
+  justify-content: center;
+  padding: var(--space-1) var(--space-2);
+  column-gap: var(--space-1);
+}
+
+.badge--status {
+  background-color: color-mix(in srgb, var(--color-status) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-status) 25%, transparent);
+}
+
+.badge--status::before {
+  content: "";
+  background-color: var(--color-status, transparent);
+  border-radius: var(--radius-full);
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.badge--status[data-status="releasing"] {
+  --color-status: var(--color-airing);
+}
+.badge--status[data-status="finished"] {
+  --color-status: var(--color-finished);
+}
+.badge--status[data-status="not_yet_released"] {
+  --color-status: var(--color-not-yet-aired);
+}
+.badge--status[data-status="cancelled"] {
+  --color-status: var(--color-cancelled);
+}
+.badge--status[data-status="hiatus"] {
+  --color-status: var(--color-not-yet-aired);
+}
+
+.badge__label {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-label-small);
+  font-weight: var(--font-weight-label-small);
+  letter-spacing: var(--letter-spacing-label-small);
+  line-height: var(--line-height-label-small);
+}
+
+.badge--status[data-status="releasing"] .badge__label {
+  color: var(--color-airing);
+}
+.badge--status[data-status="finished"] .badge__label {
+  color: var(--color-finished);
+}
+.badge--status[data-status="not_yet_released"] .badge__label {
+  color: var(--color-not-yet-aired);
+}
+.badge--status[data-status="cancelled"] .badge__label {
+  color: var(--color-cancelled);
+}
+.badge--status[data-status="hiatus"] .badge__label {
+  color: var(--color-not-yet-aired);
+}

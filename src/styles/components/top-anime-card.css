@@ -1,0 +1,200 @@
+.top-anime-card {
+  align-items: center;
+  background-color: var(--color-surface-container);
+  border-radius: var(--radius-md);
+  column-gap: var(--space-3);
+  display: flex;
+  height: 4.5rem;
+  padding: var(--space-2) var(--space-3);
+}
+
+.top-anime-card__rank-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 1.5rem;
+}
+
+.top-anime-card__rank {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-title-small);
+  font-weight: var(--font-weight-title-small);
+  letter-spacing: var(--letter-spacing-title-small);
+  line-height: var(--line-height-title-small);
+}
+
+.top-anime-card__rank--1,
+.top-anime-card__rank--2,
+.top-anime-card__rank--3 {
+  font-size: var(--font-size-title-medium);
+  font-weight: var(--font-weight-title-medium);
+  letter-spacing: var(--letter-spacing-title-medium);
+  line-height: var(--line-height-title-medium);
+}
+
+.top-anime-card__rank--1 {
+  color: var(--color-score);
+}
+.top-anime-card__rank--2 {
+  color: var(--color-secondary);
+}
+.top-anime-card__rank--3 {
+  color: var(--color-tertiary);
+}
+
+.top-anime-card__cover-container {
+  display: flex;
+}
+
+.top-anime-card__cover {
+  aspect-ratio: 56 / 70;
+  border-radius: var(--radius-sm);
+  width: 2.75rem;
+}
+
+.top-anime-card__info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: var(--space-2);
+  row-gap: var(--space-2);
+}
+
+.top-anime-card__title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--color-on-surface);
+  display: -webkit-box;
+  font-size: var(--font-size-title-small);
+  font-weight: var(--font-weight-title-small);
+  letter-spacing: var(--letter-spacing-title-small);
+  line-clamp: 1;
+  line-height: var(--line-height-title-small);
+  overflow: hidden;
+  transition: color var(--duration-short) var(--easing-standard);
+}
+
+a:hover .top-anime-card__title,
+a:focus-visible .top-anime-card__title {
+  color: var(--color-primary);
+}
+
+.top-anime-card__genres {
+  display: none;
+  column-gap: var(--space-1);
+  list-style: none;
+}
+
+.top-anime-card__score-container,
+.top-anime-card__format-container,
+.top-anime-card__season-container {
+  display: none;
+  flex-direction: column;
+  row-gap: var(--space-1);
+  width: 6.25rem;
+}
+
+.top-anime-card__score {
+  color: var(--color-score);
+  font-size: var(--font-size-label-medium);
+  font-weight: var(--font-weight-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.top-anime-card__score-users {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.top-anime-card__format {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-label-medium);
+  font-weight: var(--font-weight-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.top-anime-card__episodes {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.top-anime-card__season {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-label-medium);
+  font-weight: var(--font-weight-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.top-anime-card__status {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+@media (min-width: 600px) {
+  .top-anime-card {
+    height: 4.75rem;
+  }
+
+  .top-anime-card__rank-container {
+    width: 2rem;
+  }
+
+  .top-anime-card__rank {
+    font-size: var(--font-size-title-medium);
+    font-weight: var(--font-weight-title-medium);
+    letter-spacing: var(--letter-spacing-title-medium);
+    line-height: var(--line-height-title-medium);
+  }
+
+  .top-anime-card__rank--1,
+  .top-anime-card__rank--2,
+  .top-anime-card__rank--3 {
+    font-size: var(--font-size-title-large);
+    font-weight: var(--font-weight-title-large);
+    letter-spacing: var(--letter-spacing-title-large);
+    line-height: var(--line-height-title-large);
+  }
+
+  .top-anime-card__cover {
+    width: 3rem;
+  }
+
+  .top-anime-card__format-container {
+    display: flex;
+  }
+}
+
+@media (min-width: 905px) {
+  .top-anime-card {
+    column-gap: var(--space-4);
+    height: 6rem;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .top-anime-card__rank-container {
+    width: 3.25rem;
+  }
+
+  .top-anime-card__cover {
+    width: 3.5rem;
+  }
+
+  .top-anime-card__genres {
+    display: flex;
+  }
+
+  .top-anime-card__score-container,
+  .top-anime-card__season-container {
+    display: flex;
+  }
+}

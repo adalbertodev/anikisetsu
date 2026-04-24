@@ -10,7 +10,8 @@
   flex-direction: column;
   margin: auto;
   max-width: var(--max-width);
-  padding: var(--space-8) var(--space-4) var(--space-6) var(--space-4);
+  padding: var(--space-8) var(--lateral-global-padding) var(--space-6)
+    var(--lateral-global-padding);
   row-gap: var(--space-8);
   width: 100%;
 }
@@ -106,7 +107,7 @@
   .footer__container {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    padding: var(--space-12) var(--space-6) var(--space-8) var(--space-6);
+    padding-block: var(--space-12) var(--space-8);
     column-gap: var(--space-16);
   }
 
@@ -121,12 +122,12 @@
   }
 
   .footer__container {
-    padding: var(--space-12) var(--space-8);
+    padding-block: var(--space-12);
   }
 }
 
 @media (min-width: 1240px) {
   .footer__container {
-    padding: var(--space-12) var(--space-12) var(--space-16) var(--space-12);
+    padding-block: var(--space-12) var(--space-16);
   }
 }

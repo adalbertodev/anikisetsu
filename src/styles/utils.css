@@ -47,6 +47,11 @@
   transition: opacity var(--duration-short) var(--easing-standard);
 }
 
+.state-layer--primary::before,
+.state-layer--has-child:has(.state-layer--primary)::before {
+  background-color: var(--color-on-primary);
+}
+
 .state-layer--secondary::before,
 .state-layer--has-child:has(.state-layer--secondary)::before {
   background-color: var(--color-on-secondary-container);

@@ -9,13 +9,29 @@
   --space-12: 3rem; /* 48px */
   --space-16: 4rem; /* 64px */
 
+  --lateral-global-padding: var(--space-4);
+
   --max-width: 1444px;
   --header-height: 3.5rem;
   --bottom-nav-height: 4rem;
 }
 
+@media (min-width: 600px) {
+  :root {
+    --lateral-global-padding: var(--space-6);
+  }
+}
+
 @media (min-width: 905px) {
   :root {
+    --lateral-global-padding: var(--space-8);
+
     --header-height: 4rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  :root {
+    --lateral-global-padding: var(--space-12);
   }
 }

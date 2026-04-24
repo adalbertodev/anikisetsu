@@ -5,9 +5,11 @@ import { Footer } from "./Footer";
 export const Layout = () => (
   <>
     <Header />
+
     <main id="main-content" className="main">
       <Outlet />
     </main>
+
     <Footer />
   </>
 );

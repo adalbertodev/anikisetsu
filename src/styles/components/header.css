@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 99;
 }
 
 .header__container {
@@ -16,7 +17,7 @@
   height: 100%;
   margin: auto;
   max-width: var(--max-width);
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-2) var(--lateral-global-padding);
 }
 
 .header__brand {
@@ -50,22 +51,9 @@
   .header__container {
     column-gap: var(--space-12);
     grid-template-columns: 1fr auto auto;
-    padding-inline: var(--space-6);
   }
 
   .header__brand-name {
     display: block;
-  }
-}
-
-@media (min-width: 905px) {
-  .header__container {
-    padding-inline: var(--space-8);
-  }
-}
-
-@media (min-width: 1240px) {
-  .header__container {
-    padding-inline: var(--space-12);
   }
 }

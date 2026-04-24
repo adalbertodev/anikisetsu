@@ -10,6 +10,7 @@ body {
   font-weight: var(--font-weight-body-medium);
   letter-spacing: var(--letter-spacing-body-medium);
   line-height: var(--line-height-body-medium);
+  min-height: 100dvh;
   padding-bottom: var(--bottom-nav-height);
 }
 
@@ -21,6 +22,16 @@ body {
 
 :lang(ja) {
   font-family: var(--font-family-jp);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 h1 {
@@ -80,4 +91,16 @@ b {
 ::selection {
   background-color: var(--color-primary-container);
   color: var(--color-on-primary-container);
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-8);
+}
+
+@media (min-width: 905px) {
+  .home-container {
+    row-gap: var(--space-12);
+  }
 }

@@ -1,0 +1,101 @@
+.anime-preview-section {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: var(--max-width);
+  padding-inline: var(--lateral-global-padding);
+  row-gap: var(--space-4);
+  width: 100%;
+}
+
+.anime-preview-section__header {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.anime-preview-section__heading {
+  display: flex;
+  column-gap: var(--space-2);
+  min-width: 0;
+}
+
+.anime-preview-section__title {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-title-medium);
+  font-weight: var(--font-weight-title-medium);
+  letter-spacing: var(--letter-spacing-title-medium);
+  line-height: var(--line-height-title-medium);
+}
+
+.anime-preview-section__season {
+  color: var(--color-primary);
+  display: none;
+  font-size: var(--font-size-title-medium);
+  font-weight: var(--font-weight-title-medium);
+  letter-spacing: var(--letter-spacing-title-medium);
+  line-height: var(--line-height-title-medium);
+}
+
+.anime-preview-section__view-all {
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  font-size: var(--font-size-label-medium);
+  font-weight: var(--font-weight-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+  padding: var(--space-1) var(--space-2);
+}
+
+.anime-preview-section__animes {
+  display: grid;
+  gap: var(--space-6) var(--space-4);
+  grid-auto-rows: 0;
+  grid-template-columns: repeat(auto-fill, minmax(109px, 1fr));
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+  .anime-preview-section__season {
+    display: block;
+  }
+
+  .anime-preview-section__animes {
+    gap: 0 var(--space-6);
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-rows: auto;
+  }
+}
+
+@media (min-width: 905px) {
+  .anime-preview-section__title {
+    font-size: var(--font-size-title-large);
+    font-weight: var(--font-weight-title-large);
+    letter-spacing: var(--letter-spacing-title-large);
+    line-height: var(--line-height-title-large);
+  }
+
+  .anime-preview-section__season {
+    font-size: var(--font-size-title-large);
+    font-weight: var(--font-weight-title-large);
+    letter-spacing: var(--letter-spacing-title-large);
+    line-height: var(--line-height-title-large);
+  }
+
+  .anime-preview-section__animes {
+    grid-template-columns: repeat(auto-fill, minmax(169px, 1fr));
+  }
+}
+
+@media (min-width: 1240px) {
+  .anime-preview-section__animes {
+    column-gap: var(--space-8);
+  }
+}
+
+@media (min-width: 1440px) {
+  .anime-preview-section__animes {
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  }
+}

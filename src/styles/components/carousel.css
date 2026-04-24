@@ -1,0 +1,85 @@
+.carousel {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.carousel__track {
+  background: linear-gradient(
+    135deg,
+    #1a0a2e 0%,
+    #2d1b4e 30%,
+    #4a2060 60%,
+    #3d1a1a 100%
+  );
+  display: grid;
+  grid-template-areas: "stack";
+  height: 100%;
+  list-style: none;
+}
+
+.carousel__slide {
+  grid-area: stack;
+  max-height: 27.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-medium) var(--easing-emphasized);
+}
+
+.carousel__slide[data-active] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel__controls {
+  display: flex;
+  column-gap: var(--space-4);
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  translate: -50% 0;
+  align-items: center;
+}
+
+.carousel__control {
+  align-items: center;
+  background-color: color-mix(in srgb, var(--color-on-surface) 8%, transparent);
+  border-radius: var(--radius-full);
+  border: 1px solid color-mix(in srgb, var(--color-on-surface) 12%, transparent);
+  color: var(--color-on-surface);
+  display: flex;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-body-large);
+  height: 2.25rem;
+  justify-content: center;
+  letter-spacing: var(--letter-spacing-body-large);
+  line-height: var(--line-height-body-large);
+  width: 2.25rem;
+}
+
+/* Indicadores (dots) — centrados abajo sobre el viewport. */
+.carousel__dots {
+  align-items: center;
+  display: flex;
+  column-gap: var(--space-2);
+  list-style: none;
+}
+
+.carousel__dots > li {
+  display: flex;
+}
+
+.carousel__dot {
+  background-color: rgb(255 255 255 / 0.4);
+  border-radius: var(--radius-full);
+  height: 0.25rem;
+  transition:
+    background-color var(--duration-short) var(--easing-standard),
+    width var(--duration-short) var(--easing-standard);
+  width: 0.75rem;
+}
+
+.carousel__dot[data-active] {
+  background-color: var(--color-primary);
+  width: 1.5rem;
+}

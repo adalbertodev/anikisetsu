@@ -78,4 +78,10 @@
   --color-on-cancelled: rgb(60 42 44);
   --color-cancelled-container: rgb(90 63 66);
   --color-on-cancelled-container: rgb(255 219 221);
+
+  /* Score */
+  --color-score: rgb(255 215 0);
+  --color-on-score: rgb(61 46 0);
+  --color-score-container: rgb(87 66 0);
+  --color-on-score-container: rgb(255 229 102);
 }
