@@ -4,11 +4,18 @@
 @import "./top-nav.css";
 @import "./footer.css";
 
+@import "./filter-chip.css";
 @import "./search.css";
 @import "./carousel.css";
 @import "./badge.css";
 @import "./anime-card.css";
+@import "./anime-card-extended.css";
 @import "./top-anime-card.css";
 @import "./anime-preview-section.css";
 @import "./trending-hero.css";
 @import "./top-animes-section.css";
+@import "./anime-filters-section.css";
+@import "./anime-grid.css";
+@import "./filter-select.css";
+@import "./sort-select.css";
+@import "./view-toggle.css";

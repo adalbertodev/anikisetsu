@@ -1,0 +1,59 @@
+.anime-grid {
+  margin: auto;
+  max-width: var(--max-width);
+  padding-inline: var(--lateral-global-padding);
+  width: 100%;
+}
+
+.anime-grid__empty {
+  align-items: center;
+  display: flex;
+  height: 32rem;
+  justify-content: center;
+  padding-block: var(--space-16);
+}
+
+.anime-grid__animes {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(109px, 1fr));
+  justify-content: space-between;
+  list-style: none;
+}
+
+.anime-grid[data-view="chart"] .anime-grid__animes {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+@media (min-width: 600px) {
+  .anime-grid__animes {
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .anime-grid[data-view="chart"] .anime-grid__animes {
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  }
+}
+
+@media (min-width: 905px) {
+  .anime-grid__animes {
+    grid-template-columns: repeat(auto-fill, minmax(169px, 1fr));
+  }
+}
+
+@media (min-width: 1240px) {
+  .anime-grid__animes {
+    gap: var(--space-6) var(--space-8);
+  }
+
+  .anime-grid[data-view="chart"] .anime-grid__animes {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .anime-grid__animes {
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  }
+}

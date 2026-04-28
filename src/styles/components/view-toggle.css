@@ -1,0 +1,34 @@
+.view-toggle {
+  background-color: var(--color-surface-container);
+  border-radius: var(--radius-sm);
+  display: flex;
+  overflow: hidden;
+  padding: var(--space-1);
+}
+
+.view-toggle__option {
+  align-items: center;
+  background-color: transparent;
+  border-radius: var(--radius-xs);
+  border: none;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  padding: 0;
+  transition:
+    background-color var(--duration-short) var(--easing-standard),
+    color var(--duration-short) var(--easing-standard);
+  width: 2rem;
+}
+
+.view-toggle__option[data-active] {
+  background-color: var(--color-surface-container-highest);
+  color: var(--color-primary);
+}
+
+.view-toggle__option > span {
+  font-size: 1.125rem;
+  font-variation-settings: "OPSZ" 20;
+}

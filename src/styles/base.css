@@ -99,6 +99,12 @@ b {
   row-gap: var(--space-8);
 }
 
+.animes-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-8);
+}
+
 @media (min-width: 905px) {
   .home-container {
     row-gap: var(--space-12);

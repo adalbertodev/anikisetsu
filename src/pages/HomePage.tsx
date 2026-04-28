@@ -20,6 +20,8 @@ export default function HomePage() {
 
   return (
     <div className="home-container">
+      <title>Inicio · AniKisetsu</title>
+
       <TrendingAnimesSection animes={trendingAnimes} />
 
       <AnimePreviewSection

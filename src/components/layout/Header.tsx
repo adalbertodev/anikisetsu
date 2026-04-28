@@ -1,10 +1,12 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { Search } from "../ui";
 import { TopNav } from "./TopNav";
 import { DrawerNav } from "./DrawerNav";
 import { BottomNav } from "./BottomNav";
 
 export const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
       <div className="header__container">
@@ -19,7 +21,12 @@ export const Header = () => {
           <span className="header__brand-name">AniKisetsu</span>
         </Link>
 
-        <Search />
+        <Search
+          isHeader={true}
+          onSubmit={(value) =>
+            void navigate({ pathname: "/animes", search: `?search=${value}` })
+          }
+        />
 
         <BottomNav />
         <DrawerNav />

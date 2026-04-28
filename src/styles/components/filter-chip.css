@@ -1,0 +1,34 @@
+.filter-chip {
+  align-items: center;
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  column-gap: var(--space-1);
+  height: 1.5rem;
+}
+
+.filter-chip__label {
+  color: var(--color-on-secondary);
+  font-size: var(--font-size-label-medium);
+  font-weight: var(--font-weight-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.filter-chip__close-icon {
+  align-items: center;
+  display: none;
+  justify-content: center;
+}
+
+.filter-chip:hover .filter-chip__close-icon {
+  display: flex;
+}
+
+.filter-chip__close-icon > span {
+  color: var(--color-on-secondary);
+  font-size: 1rem;
+  font-variation-settings: "OPSZ" 18;
+}

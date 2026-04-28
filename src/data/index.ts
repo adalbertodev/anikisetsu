@@ -5,6 +5,23 @@ import popularNextSeasonData from "./2026-04-18/popular_next_season.json";
 import popularAllTimeData from "./2026-04-18/popular_all_time.json";
 import topAnimesData from "./2026-04-18/top_100_animes.json";
 
+const DIRECTORY: Anime[] = (() => {
+  const allAnimes = [
+    ...trendingData,
+    ...popularThisSeasonData,
+    ...popularNextSeasonData,
+    ...popularAllTimeData,
+    ...topAnimesData,
+  ] as Anime[];
+  const uniqueAnimeIds = new Set<number>();
+
+  return allAnimes.filter((anime) =>
+    uniqueAnimeIds.has(anime.id) ? false : (uniqueAnimeIds.add(anime.id), true),
+  );
+})();
+
+export const getAllAnimes = (): Anime[] => DIRECTORY;
+
 export const getTrendingAnimes = (): Anime[] => {
   return trendingData as Anime[];
 };

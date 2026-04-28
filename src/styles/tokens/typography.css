@@ -67,6 +67,11 @@
   --font-weight-body-small: 400;
   --letter-spacing-body-small: 0.025rem;
 
+  --font-size-body-very-small: 0.6875rem; /* 12px */
+  --line-height-body-very-small: 1rem; /* 16px */
+  --font-weight-body-very-small: 400;
+  --letter-spacing-body-very-small: 0.03125rem;
+
   /* ----- Label ----- */
   --font-size-label-large: 0.875rem; /* 14px */
   --line-height-label-large: 1.25rem; /* 20px */

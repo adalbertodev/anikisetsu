@@ -1,33 +1,52 @@
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 
 interface SearchProps {
+  value?: string;
+  onChange?: (value: string) => void;
   onSubmit?: (value: string) => void;
+  isHeader?: boolean;
+  placeholder?: string;
+  ariaLabel?: string;
 }
 
-export const Search = ({ onSubmit }: SearchProps) => {
-  const [inputValue, setInputValue] = useState("");
+export const Search = ({
+  value = "",
+  onChange,
+  onSubmit,
+  isHeader = false,
+  placeholder = "Buscar...",
+  ariaLabel = "Buscar animes",
+}: SearchProps) => {
+  const [inputValue, setInputValue] = useState(value);
+
+  const inputId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
+    const next = e.target.value;
+
+    onChange?.(next);
+    setInputValue(next);
   };
 
   const handleReset = () => {
+    onChange?.("");
     setInputValue("");
+
     inputRef.current?.focus();
   };
 
   return (
     <form
       role="search"
-      className="search"
+      className={["search", `${isHeader && "search--header"}`].join(" ")}
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit?.(inputValue);
       }}
     >
-      <label htmlFor="search-input" className="sr-only">
-        Buscar animes
+      <label htmlFor={inputId} className="sr-only">
+        {ariaLabel}
       </label>
 
       <div className="search__container state-layer state-layer--has-child">
@@ -38,13 +57,13 @@ export const Search = ({ onSubmit }: SearchProps) => {
         </span>
 
         <input
-          id="search-input"
+          id={inputId}
           className="search__input"
           type="text"
           ref={inputRef}
           value={inputValue}
           onChange={handleChange}
-          placeholder="Buscar..."
+          placeholder={placeholder}
         />
 
         {inputValue.length > 0 && (
