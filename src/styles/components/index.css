@@ -15,7 +15,13 @@
 @import "./trending-hero.css";
 @import "./top-animes-section.css";
 @import "./anime-filters-section.css";
+@import "./anime-header-section.css";
+@import "./anime-aside.css";
+@import "./anime-content-section.css";
 @import "./anime-grid.css";
 @import "./filter-select.css";
 @import "./sort-select.css";
 @import "./view-toggle.css";
+@import "./relation-card.css";
+@import "./character-card.css";
+@import "./staff-card.css";

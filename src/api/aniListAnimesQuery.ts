@@ -39,6 +39,9 @@ query($page: Int, $perPage: Int, $sort: [MediaSort], $type: MediaType, $season: 
             name {
               full
             }
+            image {
+              large
+            }
           }
         }
       }
@@ -58,6 +61,9 @@ query($page: Int, $perPage: Int, $sort: [MediaSort], $type: MediaType, $season: 
             id
             title {
               romaji
+            }
+            coverImage {
+              extraLarge
             }
             format
             seasonYear

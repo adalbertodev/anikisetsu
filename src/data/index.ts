@@ -1,9 +1,9 @@
 import type { Anime } from "../types/Anime";
-import trendingData from "./2026-04-18/trending.json";
-import popularThisSeasonData from "./2026-04-18/popular_this_season.json";
-import popularNextSeasonData from "./2026-04-18/popular_next_season.json";
-import popularAllTimeData from "./2026-04-18/popular_all_time.json";
-import topAnimesData from "./2026-04-18/top_100_animes.json";
+import trendingData from "./2026-05-01/trending.json";
+import popularThisSeasonData from "./2026-05-01/popular_this_season.json";
+import popularNextSeasonData from "./2026-05-01/popular_next_season.json";
+import popularAllTimeData from "./2026-05-01/popular_all_time.json";
+import topAnimesData from "./2026-05-01/top_100_animes.json";
 
 const DIRECTORY: Anime[] = (() => {
   const allAnimes = [
@@ -21,6 +21,14 @@ const DIRECTORY: Anime[] = (() => {
 })();
 
 export const getAllAnimes = (): Anime[] => DIRECTORY;
+
+export const getAllAnimesSortedByPopularity = () => {
+  const allAnimes = getAllAnimes();
+
+  return [...allAnimes].sort(
+    (a, b) => (b.popularity ?? -Infinity) - (a.popularity ?? -Infinity),
+  );
+};
 
 export const getTrendingAnimes = (): Anime[] => {
   return trendingData as Anime[];
@@ -43,19 +51,15 @@ export const getTopAnimes = (): Anime[] => {
 };
 
 export const getAnimeById = (id: number): Anime | null => {
-  const trendingAnimes = trendingData as Anime[];
-  const popularThisSeasonAnimes = popularThisSeasonData as Anime[];
-  const popularNextSeasonAnimes = popularNextSeasonData as Anime[];
-  const popularAllTimeAnimes = popularAllTimeData as Anime[];
-  const topAnimes = topAnimesData as Anime[];
-
-  const allAnimes = [
-    ...trendingAnimes,
-    ...popularThisSeasonAnimes,
-    ...popularNextSeasonAnimes,
-    ...popularAllTimeAnimes,
-    ...topAnimes,
-  ];
+  const allAnimes = getAllAnimes();
 
   return allAnimes.find((anime) => anime.id === id) ?? null;
+};
+
+export const getPopularityRank = (animeId: number): number | null => {
+  const ranking = [...DIRECTORY].sort(
+    (a, b) => (b.popularity ?? -Infinity) - (a.popularity ?? -Infinity),
+  );
+  const index = ranking.findIndex((anime) => anime.id === animeId);
+  return index >= 0 ? index + 1 : null;
 };

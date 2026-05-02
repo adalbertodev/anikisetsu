@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { Anime } from "../../types/Anime";
 import { Badge } from "./Badge";
+import { getMainStudioName } from "../../utils";
 
 const MAX_VISIBLE_GENRES = 2;
 
@@ -35,7 +36,7 @@ export const AnimeCardExtended = ({ anime }: AnimeCardExtendedProps) => {
             </h3>
 
             <span className="anime-card--extended__studio">
-              {anime.studios?.find((studio) => studio.isMain)?.name}
+              {getMainStudioName(anime.studios)}
             </span>
           </div>
         </div>

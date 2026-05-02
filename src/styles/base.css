@@ -105,6 +105,28 @@ b {
   row-gap: var(--space-8);
 }
 
+.anime-page {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-8);
+}
+
+.anime-page__content {
+  column-gap: var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  max-width: var(--max-width);
+  padding-inline: var(--lateral-global-padding);
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .anime-page__content {
+    grid-template-columns: auto 1fr;
+  }
+}
+
 @media (min-width: 905px) {
   .home-container {
     row-gap: var(--space-12);

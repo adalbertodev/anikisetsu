@@ -83,10 +83,15 @@ export type CharacterRole = "MAIN" | "SUPPORTING" | "BACKGROUND";
 
 export interface Character {
   name: CharacterName;
+  image: CharacterImage;
 }
 
 export interface CharacterName {
   full: string;
+}
+
+export interface CharacterImage {
+  large: string;
 }
 
 export interface FuzzyDate {

@@ -1,0 +1,48 @@
+.staff-card {
+  background-color: var(--color-surface-container);
+  border-radius: var(--space-3);
+  border: 1px solid var(--color-outline-variant);
+  column-gap: var(--space-3);
+  display: flex;
+  padding: var(--space-3);
+}
+
+.staff-card__image {
+  aspect-ratio: 48 / 65;
+  border-radius: var(--radius-sm);
+  max-width: 3rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.staff-card__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  width: 100%;
+}
+
+.staff-card__name {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-label-medium);
+  font-weight: var(--font-weight-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  line-height: var(--line-height-label-medium);
+}
+
+.staff-card__role {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-label-small);
+  font-weight: var(--font-weight-label-small);
+  letter-spacing: var(--letter-spacing-label-small);
+  line-height: var(--line-height-label-small);
+}
+
+@media (min-width: 1240px) {
+  .staff-card__name {
+    font-size: var(--font-size-title-small);
+    font-weight: var(--font-weight-title-small);
+    letter-spacing: var(--letter-spacing-title-small);
+    line-height: var(--line-height-title-small);
+  }
+}

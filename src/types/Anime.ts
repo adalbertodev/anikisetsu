@@ -47,6 +47,7 @@ export type CharacterRole = "MAIN" | "SUPPORTING" | "BACKGROUND";
 
 export interface Character {
   name: CharacterName;
+  image: string;
   role: CharacterRole;
   voiceActors: Staff[];
 }

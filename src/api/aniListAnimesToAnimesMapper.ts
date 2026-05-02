@@ -25,6 +25,7 @@ export const aniListAnimeToAnimeMapper = (aniListAnime: Media): Anime => {
     characters: aniListAnime.characters?.edges.map((character) => {
       return {
         name: character.node.name,
+        image: character.node.image.large,
         role: character.role,
         voiceActors: character.voiceActors.map((voiceActor) => {
           return {
