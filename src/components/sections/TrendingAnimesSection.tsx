@@ -117,7 +117,6 @@ export const TrendingAnimesSection = ({
                     "/image-placeholder.png"
                   }
                   alt=""
-                  role="presentation"
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
                 />

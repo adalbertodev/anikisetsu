@@ -68,6 +68,8 @@ export const AnimeHeaderSection = ({ anime }: AnimeHeaderSectionProps) => {
             )}
           </div>
 
+          {/* dangerouslySetInnerHTML porque la sinopsis de AniList trae HTML
+              (<br>, <i>). Riesgo XSS aceptable: el JSON es local y curado. */}
           {anime.description && (
             <p
               className="anime-header__description"

@@ -7,6 +7,7 @@
   width: 100%;
 }
 
+/* Animación de entrada al renderizar la card en el grid. */
 @keyframes growUp {
   from {
     opacity: 0;
@@ -81,6 +82,8 @@
   display: -webkit-box;
   font-size: var(--font-size-label-medium);
   font-weight: var(--font-weight-label-medium);
+  /* Trunca a 2 líneas y reserva alto fijo: títulos cortos y largos
+   * mantienen la misma altura de card en el grid. */
   height: calc(var(--line-height-label-medium) * 2);
   letter-spacing: var(--letter-spacing-label-medium);
   line-clamp: 2;
@@ -94,6 +97,7 @@
   color: var(--color-primary);
 }
 
+/* Géneros ocultos en mobile/tablet: se muestran solo en ≥905px. */
 .anime-card__genres {
   display: none;
   column-gap: var(--space-1);

@@ -115,7 +115,9 @@ export const AnimeFiltersSection = ({
       <div className="anime-filters__secondary">
         <div className="anime-filters__filter-tags">
           <div className="anime-filters__filter-tags-icon">
-            <span className="material-symbols-outlined">bookmarks</span>
+            <span className="material-symbols-outlined" aria-hidden="true">
+              bookmarks
+            </span>
           </div>
 
           {activeChips.length > 0 && (

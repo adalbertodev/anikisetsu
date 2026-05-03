@@ -86,6 +86,8 @@ a:focus-visible .top-anime-card__title {
   list-style: none;
 }
 
+/* Progressive disclosure: estos bloques se ocultan en mobile y aparecen
+ * en breakpoints superiores (formato en ≥600px, score y season en ≥905px). */
 .top-anime-card__score-container,
 .top-anime-card__format-container,
 .top-anime-card__season-container {

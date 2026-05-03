@@ -206,6 +206,8 @@ export const FilterSelect = <T extends string>(props: FilterSelectProps<T>) => {
               aria-selected={selected}
               tabIndex={index === activeIndex ? 0 : -1}
               className="filter-select__option"
+              // false renderizaría como data-selected="false" (truthy en CSS).
+              // undefined hace que el atributo no aparezca.
               data-selected={selected || undefined}
               onClick={() => selectOption(option)}
               onMouseMove={() => setActiveIndex(index)}

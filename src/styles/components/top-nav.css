@@ -1,3 +1,4 @@
+/* TopNav: visible solo en ≥905px. En <905px → DrawerNav o BottomNav. */
 .top-nav {
   align-items: center;
   display: none;

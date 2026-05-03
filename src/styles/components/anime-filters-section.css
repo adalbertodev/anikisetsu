@@ -44,6 +44,7 @@
   width: 2.5rem;
 }
 
+/* El icono bookmark solo aparece cuando hay al menos un chip activo. */
 .anime-filters:has(.anime-filters__genre-tags)
   .anime-filters__filter-tags-icon {
   display: flex;
@@ -101,6 +102,8 @@
 }
 
 @media (min-width: 905px) {
+  /* Desktop: 5 columnas exactas (Search + Géneros + Año + Temporada + Formato).
+   * En 1240px+ pasamos a 6 (añade Estado de emisión). */
   .anime-filters__inputs {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -113,6 +116,8 @@
     grid-column: auto;
   }
 
+  /* "Limpiar todo" se oculta y aparece al pasar el ratón por la zona de
+   * filtros activos. */
   .anime-filters__clear-all {
     display: none;
   }

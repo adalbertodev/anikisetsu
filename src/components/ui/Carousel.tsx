@@ -40,6 +40,8 @@ export const Carousel = ({
           const isActive = index === activeIndex;
 
           return (
+            // inert + aria-hidden retiran las slides inactivas del tab order
+            // y del a11y tree: el teclado no entra en contenido oculto.
             <li
               key={index}
               id={`${baseId}-slide-${index}`}
@@ -75,7 +77,7 @@ export const Carousel = ({
             const isActive = index === activeIndex;
 
             return (
-              <li key={index} role="presentation">
+              <li key={index}>
                 <button
                   type="button"
                   className="carousel__dot"

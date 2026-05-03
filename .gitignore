@@ -25,4 +25,3 @@ dist-ssr
 
 docs/
 .vscode/
-src/data/**/*.json

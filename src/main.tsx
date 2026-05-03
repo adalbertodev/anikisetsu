@@ -13,6 +13,8 @@ import "./styles/base.css";
 import "./styles/utils.css";
 import "./styles/components/index.css";
 
+// Layout es el route padre con <Outlet />: cada page hija se renderiza
+// dentro del <main> del Layout, conservando header/footer en todas.
 const router = createBrowserRouter([
   {
     Component: Layout,

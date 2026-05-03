@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import type { Anime } from "../../types/Anime";
 import { Badge } from "./Badge";
 import { getMainStudioName } from "../../utils";
+import { STATUS_LABELS } from "../../types";
 
 const MAX_VISIBLE_GENRES = 2;
 
@@ -14,18 +15,21 @@ export const AnimeCardExtended = ({ anime }: AnimeCardExtendedProps) => {
     <article className="anime-card--extended">
       <Link className="anime-card--extended__link" to={`/anime/${anime.id}`}>
         <div className="anime-card--extended__cover">
-          <span
-            className="anime-card--extended__status"
-            data-status={anime.status?.toLowerCase()}
-            role="img"
-            aria-label={anime.status}
-          />
+          {/* Punto coloreado decorativo: data-status mapea al color vía CSS. */}
+          {anime.status && (
+            <span
+              className="anime-card--extended__status"
+              data-status={anime.status?.toLowerCase()}
+              role="img"
+              aria-label={`Estado: ${STATUS_LABELS[anime.status]}`}
+            />
+          )}
 
+          {/* alt="" porque la imagen es decorativa: el título va en el overlay. */}
           <img
             className="anime-card--extended__image"
             src={anime.coverImage ?? "/image-placeholder.png"}
             alt=""
-            role="presentation"
             loading="lazy"
             decoding="async"
           />

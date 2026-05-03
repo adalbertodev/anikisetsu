@@ -17,6 +17,8 @@ export const AnimeGrid = ({
   const isEmpty = animes.length === 0;
 
   return (
+    // data-view permite al CSS branchear el grid (cover vs chart) sin que
+    // este componente tenga que conocer el layout concreto de cada vista.
     <section
       className="anime-grid"
       data-view={view}

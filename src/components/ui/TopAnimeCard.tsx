@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { Anime } from "../../types";
 import { Badge } from "./Badge";
+import { useMemo } from "react";
 
 const MAX_VISIBLE_GENRES = 4;
 
@@ -10,6 +11,16 @@ interface TopAnimeCard {
 }
 
 export const TopAnimeCard = ({ anime, rank }: TopAnimeCard) => {
+  const totalUsers = useMemo(
+    () =>
+      anime.scoreDistribution?.reduce(
+        (totalVotes, scoreDistribution) =>
+          totalVotes + scoreDistribution.amount,
+        0,
+      ),
+    [anime],
+  );
+
   return (
     <article className="top-anime-card">
       <div className="top-anime-card__rank-container">
@@ -56,7 +67,9 @@ export const TopAnimeCard = ({ anime, rank }: TopAnimeCard) => {
             {(anime.averageScore / 10).toFixed(1)}
           </span>
 
-          <span className="top-anime-card__score-users">??? usuarios</span>
+          <span className="top-anime-card__score-users">
+            {totalUsers?.toLocaleString("es-Es")} usuarios
+          </span>
         </div>
       )}
 

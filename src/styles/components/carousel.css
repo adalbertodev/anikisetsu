@@ -12,6 +12,8 @@
     #4a2060 60%,
     #3d1a1a 100%
   );
+  /* Todas las slides se apilan en la misma celda del grid.
+   * Solo la activa es visible (opacity:1) — cross-fade sin reflujo. */
   display: grid;
   grid-template-areas: "stack";
   height: 100%;

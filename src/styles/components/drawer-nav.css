@@ -1,3 +1,6 @@
+/* DrawerNav: visible solo entre 600px y 905px (panel hamburguesa).
+ * <600px → BottomNav; ≥905px → TopNav. */
+
 .drawer-nav__menu-button {
   align-items: center;
   border-radius: var(--radius-full);

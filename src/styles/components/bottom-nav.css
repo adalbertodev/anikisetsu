@@ -1,3 +1,4 @@
+/* BottomNav: visible solo en <600px. En ≥600px → DrawerNav o TopNav. */
 .bottom-nav {
   background-color: var(--color-surface-container);
   bottom: 0;
