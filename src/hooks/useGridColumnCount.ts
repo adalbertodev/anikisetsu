@@ -16,8 +16,8 @@ export const useGridColumnCount = (
         .gridTemplateColumns.split(" ")
         .filter(Boolean).length;
 
-      const isMobile = window.matchMedia("(max-width: 599.9px)").matches;
-      setColumns(Math.max(1, isMobile ? tracks * 2 : tracks));
+      const isNotMobile = window.matchMedia("(min-width: 600px)").matches;
+      setColumns(Math.max(1, !isNotMobile ? tracks * 2 : tracks));
     };
 
     compute();

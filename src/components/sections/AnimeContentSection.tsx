@@ -10,6 +10,15 @@ const VISIBLE_RELATION_TYPES: Relation["relationType"][] = [
   "SIDE_STORY",
   "SPIN_OFF",
 ];
+const VISIBLE_RELATION_FORMAT: Anime["format"][] = [
+  "MOVIE",
+  "ONA",
+  "ONE_SHOT",
+  "OVA",
+  "SPECIAL",
+  "TV",
+  "TV_SHORT",
+];
 const MAX_VISIBLE_CHARACTERS = 6;
 const MAX_VISIBLE_STAFF = 3;
 const KEY_STAFF_ROLES = [
@@ -37,6 +46,9 @@ export const AnimeContentSection = ({
   const visibleRelations = useMemo(
     () =>
       [...(anime.relations ?? [])]
+        .filter((relation) =>
+          VISIBLE_RELATION_FORMAT.includes(relation.anime.format as never),
+        )
         .filter((relation) =>
           VISIBLE_RELATION_TYPES.includes(relation.relationType as never),
         )
@@ -250,7 +262,7 @@ export const AnimeContentSection = ({
 
           <ul className="anime-content__staff" role="list">
             {staffMembers.map((staff) => (
-              <li key={staff.name}>
+              <li key={`${staff.name} - ${staff.role}`}>
                 <StaffCard staff={staff} />
               </li>
             ))}
