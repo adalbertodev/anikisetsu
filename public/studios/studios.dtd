@@ -1,0 +1,13 @@
+<!ELEMENT studios (studio+)>
+<!ELEMENT studio (name, animes)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT animes (anime+)>
+<!ELEMENT anime (title, score?, popularity?, year?, episodes?)>
+<!ATTLIST anime
+  id CDATA #REQUIRED
+  format (MOVIE|ONA|ONE_SHOT|OVA|SPECIAL|TV|TV_SHORT) #IMPLIED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT score (#PCDATA)>
+<!ELEMENT popularity (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT episodes (#PCDATA)>
